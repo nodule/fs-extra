@@ -1,0 +1,176 @@
+{
+  "name": "fs-extra",
+  "description": "Extra Filesystem components for Chiχ",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/fs-extra.git"
+  },
+  "dependencies": {
+    "fs-extra": "0.x.x"
+  },
+  "nodes": [
+    {
+      "ports": {
+        "input": {
+          "from": {
+            "title": "From Filename",
+            "type": "string",
+            "required": true
+          },
+          "to": {
+            "title": "To Filename",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "error": {
+            "title": "Error",
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "fs-extra": "0.x.x"
+      },
+      "phrases": {
+        "active": "Copying file from {{input.from}} to {{input.to}}"
+      },
+      "description": "Copies a file",
+      "title": "Copy File",
+      "ns": "fs",
+      "name": "copy",
+      "env": "server",
+      "fn": "output = [fs_extra, 'copy', input.from, input.to]\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "from": {
+            "title": "From Path",
+            "type": "string",
+            "required": true
+          },
+          "to": {
+            "title": "To Path",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "error": {
+            "title": "Error",
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "fs-extra": "0.x.x"
+      },
+      "phrases": {
+        "active": "Copying files recursively from {{input.from}} to {{input.to}}"
+      },
+      "description": "Recursively Copies a file",
+      "title": "Recursive File Copy",
+      "ns": "fs",
+      "name": "copyRecursive",
+      "env": "server",
+      "fn": "output = [fs_extra, 'copyRecursive', input.from, input.to]\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "path": {
+            "title": "Path",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "error": {
+            "title": "Error",
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "fs-extra": "0.x.x"
+      },
+      "phrases": {
+        "active": "Creating Directory {{input.path}} recursively"
+      },
+      "description": "Recursively Creates Directories",
+      "title": "Recursive Create Dirs",
+      "ns": "fs",
+      "name": "mkdirRecursive",
+      "env": "server",
+      "fn": "output = [fs_extra, 'mkdirRecursive', input.from]\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "from": {
+            "title": "From Filename",
+            "type": "string",
+            "required": true
+          },
+          "to": {
+            "title": "To Filename",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "error": {
+            "title": "Error",
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "fs-extra": "0.x.x"
+      },
+      "phrases": {
+        "active": "Moving file from {{input.from}} to {{input.to}}"
+      },
+      "description": "Moves a file",
+      "title": "Move File",
+      "ns": "fs",
+      "name": "move",
+      "env": "server",
+      "fn": "output = [fs_extra, 'move', input.from, input.to]\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "path": {
+            "title": "Path",
+            "type": "string",
+            "required": true
+          }
+        },
+        "output": {
+          "error": {
+            "title": "Error",
+            "type": "object"
+          }
+        }
+      },
+      "require": {
+        "fs-extra": "0.x.x"
+      },
+      "phrases": {
+        "active": "Removing Directory {{input.path}} recursively"
+      },
+      "description": "Recursively Removes Directories",
+      "title": "Recursive Dir Removal",
+      "ns": "fs",
+      "name": "rmRecursive",
+      "env": "server",
+      "fn": "output = [fs_extra, 'rmRecursive', input.path]\n"
+    }
+  ],
+  "twigs": [],
+  "env": "server"
+}

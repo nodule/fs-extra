@@ -1,0 +1,27 @@
+{
+  "name": "mkdirRecursive",
+  "ns": "fs",
+  "title": "Recursive Create Dirs",
+  "description": "Recursively Creates Directories",
+  "phrases": {
+    "active": "Creating Directory {{input.path}} recursively"
+  },
+  "require": {
+    "fs-extra": "0.x.x"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "title": "Path",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+      "error": {
+        "title": "Error",
+        "type": "object"
+      }
+    }
+  }
+}

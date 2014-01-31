@@ -1,0 +1,27 @@
+{
+  "name": "rmRecursive",
+  "ns": "fs",
+  "title": "Recursive Dir Removal",
+  "description": "Recursively Removes Directories",
+  "phrases": {
+    "active": "Removing Directory {{input.path}} recursively"
+  },
+  "require": {
+    "fs-extra": "0.x.x"
+  },
+  "ports": {
+    "input": {
+      "path": {
+        "title": "Path",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+      "error": {
+        "title": "Error",
+        "type": "object"
+      }
+    }
+  }
+}

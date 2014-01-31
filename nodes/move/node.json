@@ -1,0 +1,32 @@
+{
+  "name": "move",
+  "ns": "fs",
+  "title": "Move File",
+  "description": "Moves a file",
+  "phrases": {
+    "active": "Moving file from {{input.from}} to {{input.to}}"
+  },
+  "require": {
+    "fs-extra": "0.x.x"
+  },
+  "ports": {
+    "input": {
+      "from": {
+        "title": "From Filename",
+        "type": "string",
+        "required": true
+      },
+      "to": {
+        "title": "To Filename",
+        "type": "string",
+        "required": true
+      }
+    },
+    "output": {
+      "error": {
+        "title": "Error",
+        "type": "object"
+      }
+    }
+  }
+}
