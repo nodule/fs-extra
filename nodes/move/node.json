@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Moving file from {{input.from}} to {{input.to}}"
   },
-  "require": {
-    "fs.extra": "1.x.x"
-  },
   "ports": {
     "input": {
       "from": {
@@ -27,6 +24,11 @@
         "title": "Error",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs.extra": "1.x.x"
     }
   }
 }

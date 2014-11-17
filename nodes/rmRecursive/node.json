@@ -6,9 +6,6 @@
   "phrases": {
     "active": "Removing Directory {{input.path}} recursively"
   },
-  "require": {
-    "fs.extra": "1.x.x"
-  },
   "ports": {
     "input": {
       "path": {
@@ -22,6 +19,11 @@
         "title": "Error",
         "type": "object"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "fs.extra": "1.x.x"
     }
   }
 }
