@@ -1,1 +1,1 @@
-output = [fs_extra, 'mkdirRecursive', input.from]
+output = [fs_extra, 'mkdirRecursive', $.from]

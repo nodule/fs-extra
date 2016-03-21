@@ -1,1 +1,1 @@
-output = [fs_extra, 'copyRecursive', input.from, input.to]
+output = [fs_extra, 'copyRecursive', $.from, $.to]

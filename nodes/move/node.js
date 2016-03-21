@@ -1,1 +1,1 @@
-output = [fs_extra, 'move', input.from, input.to]
+output = [fs_extra, 'move', $.from, $.to]

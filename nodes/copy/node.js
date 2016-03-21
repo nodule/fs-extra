@@ -1,1 +1,1 @@
-output = [fs_extra, 'copy', input.from, input.to]
+output = [fs_extra, 'copy', $.from, $.to]

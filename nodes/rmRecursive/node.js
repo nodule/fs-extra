@@ -1,1 +1,1 @@
-output = [fs_extra, 'rmRecursive', input.path]
+output = [fs_extra, 'rmRecursive', $.path]
