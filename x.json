@@ -44,7 +44,7 @@
       "ns": "fs",
       "name": "copy",
       "env": "server",
-      "fn": "output = [fs_extra, 'copy', input.from, input.to]\n"
+      "fn": "output = [fs_extra, 'copy', $.from, $.to]\n"
     },
     {
       "dependencies": {
@@ -80,7 +80,7 @@
       "ns": "fs",
       "name": "copyRecursive",
       "env": "server",
-      "fn": "output = [fs_extra, 'copyRecursive', input.from, input.to]\n"
+      "fn": "output = [fs_extra, 'copyRecursive', $.from, $.to]\n"
     },
     {
       "dependencies": {
@@ -111,7 +111,7 @@
       "ns": "fs",
       "name": "mkdirRecursive",
       "env": "server",
-      "fn": "output = [fs_extra, 'mkdirRecursive', input.from]\n"
+      "fn": "output = [fs_extra, 'mkdirRecursive', $.from]\n"
     },
     {
       "dependencies": {
@@ -147,7 +147,7 @@
       "ns": "fs",
       "name": "move",
       "env": "server",
-      "fn": "output = [fs_extra, 'move', input.from, input.to]\n"
+      "fn": "output = [fs_extra, 'move', $.from, $.to]\n"
     },
     {
       "dependencies": {
@@ -178,7 +178,7 @@
       "ns": "fs",
       "name": "rmRecursive",
       "env": "server",
-      "fn": "output = [fs_extra, 'rmRecursive', input.path]\n"
+      "fn": "output = [fs_extra, 'rmRecursive', $.path]\n"
     }
   ],
   "twigs": [],

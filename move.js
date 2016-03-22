@@ -31,9 +31,9 @@ module.exports = {
       "fs.extra": "##fs.extra##"
     }
   },
-  fn: function move(input, output, state, done, cb, on, fs_extra) {
+  fn: function move(input, $, output, state, done, cb, on, fs_extra) {
     var r = function() {
-      fs_extra.move(input.from, input.to, function moveCallback(error) {
+      fs_extra.move($.from, $.to, function moveCallback(error) {
         cb({
           error: error
         });

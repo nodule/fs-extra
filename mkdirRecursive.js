@@ -26,9 +26,9 @@ module.exports = {
       "fs.extra": "##fs.extra##"
     }
   },
-  fn: function mkdirRecursive(input, output, state, done, cb, on, fs_extra) {
+  fn: function mkdirRecursive(input, $, output, state, done, cb, on, fs_extra) {
     var r = function() {
-      fs_extra.mkdirRecursive(input.from, function mkdirRecursiveCallback(error) {
+      fs_extra.mkdirRecursive($.from, function mkdirRecursiveCallback(error) {
         cb({
           error: error
         });

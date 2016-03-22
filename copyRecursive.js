@@ -31,9 +31,9 @@ module.exports = {
       "fs.extra": "##fs.extra##"
     }
   },
-  fn: function copyRecursive(input, output, state, done, cb, on, fs_extra) {
+  fn: function copyRecursive(input, $, output, state, done, cb, on, fs_extra) {
     var r = function() {
-      fs_extra.copyRecursive(input.from, input.to, function copyRecursiveCallback(error) {
+      fs_extra.copyRecursive($.from, $.to, function copyRecursiveCallback(error) {
         cb({
           error: error
         });

@@ -31,9 +31,9 @@ module.exports = {
       "fs.extra": "##fs.extra##"
     }
   },
-  fn: function copy(input, output, state, done, cb, on, fs_extra) {
+  fn: function copy(input, $, output, state, done, cb, on, fs_extra) {
     var r = function() {
-      fs_extra.copy(input.from, input.to, function copyCallback(error) {
+      fs_extra.copy($.from, $.to, function copyCallback(error) {
         cb({
           error: error
         });

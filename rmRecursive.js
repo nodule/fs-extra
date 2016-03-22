@@ -26,9 +26,9 @@ module.exports = {
       "fs.extra": "##fs.extra##"
     }
   },
-  fn: function rmRecursive(input, output, state, done, cb, on, fs_extra) {
+  fn: function rmRecursive(input, $, output, state, done, cb, on, fs_extra) {
     var r = function() {
-      fs_extra.rmRecursive(input.path, function rmRecursiveCallback(error) {
+      fs_extra.rmRecursive($.path, function rmRecursiveCallback(error) {
         cb({
           error: error
         });
