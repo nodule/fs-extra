@@ -11,10 +11,12 @@
   },
   "nodes": [
     {
-      "dependencies": {
-        "npm": {
-          "fs.extra": "1.x.x"
-        }
+      "name": "copy",
+      "ns": "fs",
+      "title": "Copy File",
+      "description": "Copies a file",
+      "phrases": {
+        "active": "Copying file from {{input.from}} to {{input.to}}"
       },
       "ports": {
         "input": {
@@ -36,21 +38,21 @@
           }
         }
       },
-      "phrases": {
-        "active": "Copying file from {{input.from}} to {{input.to}}"
-      },
-      "description": "Copies a file",
-      "title": "Copy File",
-      "ns": "fs",
-      "name": "copy",
-      "env": "server",
-      "fn": "output = [fs_extra, 'copy', $.from, $.to]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs.extra": "1.x.x"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs_extra, 'copy', $.from, $.to]\n"
+    },
+    {
+      "name": "copyRecursive",
+      "ns": "fs",
+      "title": "Recursive File Copy",
+      "description": "Recursively Copies a file",
+      "phrases": {
+        "active": "Copying files recursively from {{input.from}} to {{input.to}}"
       },
       "ports": {
         "input": {
@@ -72,21 +74,21 @@
           }
         }
       },
-      "phrases": {
-        "active": "Copying files recursively from {{input.from}} to {{input.to}}"
-      },
-      "description": "Recursively Copies a file",
-      "title": "Recursive File Copy",
-      "ns": "fs",
-      "name": "copyRecursive",
-      "env": "server",
-      "fn": "output = [fs_extra, 'copyRecursive', $.from, $.to]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs.extra": "1.x.x"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs_extra, 'copyRecursive', $.from, $.to]\n"
+    },
+    {
+      "name": "mkdirRecursive",
+      "ns": "fs",
+      "title": "Recursive Create Dirs",
+      "description": "Recursively Creates Directories",
+      "phrases": {
+        "active": "Creating Directory {{input.path}} recursively"
       },
       "ports": {
         "input": {
@@ -103,21 +105,21 @@
           }
         }
       },
-      "phrases": {
-        "active": "Creating Directory {{input.path}} recursively"
-      },
-      "description": "Recursively Creates Directories",
-      "title": "Recursive Create Dirs",
-      "ns": "fs",
-      "name": "mkdirRecursive",
-      "env": "server",
-      "fn": "output = [fs_extra, 'mkdirRecursive', $.from]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs.extra": "1.x.x"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs_extra, 'mkdirRecursive', $.from]\n"
+    },
+    {
+      "name": "move",
+      "ns": "fs",
+      "title": "Move File",
+      "description": "Moves a file",
+      "phrases": {
+        "active": "Moving file from {{input.from}} to {{input.to}}"
       },
       "ports": {
         "input": {
@@ -139,21 +141,21 @@
           }
         }
       },
-      "phrases": {
-        "active": "Moving file from {{input.from}} to {{input.to}}"
-      },
-      "description": "Moves a file",
-      "title": "Move File",
-      "ns": "fs",
-      "name": "move",
-      "env": "server",
-      "fn": "output = [fs_extra, 'move', $.from, $.to]\n"
-    },
-    {
       "dependencies": {
         "npm": {
           "fs.extra": "1.x.x"
         }
+      },
+      "env": "server",
+      "fn": "output = [fs_extra, 'move', $.from, $.to]\n"
+    },
+    {
+      "name": "rmRecursive",
+      "ns": "fs",
+      "title": "Recursive Dir Removal",
+      "description": "Recursively Removes Directories",
+      "phrases": {
+        "active": "Removing Directory {{input.path}} recursively"
       },
       "ports": {
         "input": {
@@ -170,17 +172,14 @@
           }
         }
       },
-      "phrases": {
-        "active": "Removing Directory {{input.path}} recursively"
+      "dependencies": {
+        "npm": {
+          "fs.extra": "1.x.x"
+        }
       },
-      "description": "Recursively Removes Directories",
-      "title": "Recursive Dir Removal",
-      "ns": "fs",
-      "name": "rmRecursive",
       "env": "server",
       "fn": "output = [fs_extra, 'rmRecursive', $.path]\n"
     }
   ],
-  "twigs": [],
   "env": "server"
 }
